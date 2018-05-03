@@ -102,14 +102,19 @@ var bigData = [{"females": 1966000, "country": "United States", "age": 0, "males
 
 var popTotal = function(biggyData)
 {
-	var totalsList = biggyData.map
-	return biggyData.reduce(function(a,b,c=0){
+	var totalsList = biggyData.map(function(n){
+		return n["total"];
+	})
+	//console.log(totalsList);
+	return totalsList.reduce(function(a,b){
+		/*
 		console.log("A:");
 		console.log(a);
 		console.log("B:");
 		console.log(b);
-		return(a+parseInt(b["total"]));});
-		console.log(c);
+		*/
+		return(a+b);
+	});
 }
 
 console.log(popTotal(bigData));
