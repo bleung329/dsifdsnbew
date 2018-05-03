@@ -38,11 +38,18 @@ var percentRetired = function(biggyData){
 
 console.log("total population:");
 console.log(popTotal(bigData));
+document.getElementById('d1').innerHTML = popTotal(bigData);
+
 console.log("working age population:");
 console.log(workingAge(bigData));
 console.log("working age percentage:");
 console.log(percentWorkingAge(bigData));
+document.getElementById('d2').innerHTML = percentWorkingAge(bigData);
+
 console.log("gender percentage: [male, female]");
 console.log(percentGender(bigData));
+document.getElementById('d3').innerHTML = percentGender(bigData)[1];
+
 console.log("retirement age percentage:");
 console.log(percentRetired(bigData));
+document.getElementById('d4').innerHTML = percentRetired(bigData);
